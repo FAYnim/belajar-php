@@ -1,118 +1,143 @@
-<?php
-    // komentar
-    /*multiline komentar*/
-    echo "Hello World!<br>";
 
-    // sintaks dasar
-    echo "Sintaks dasar sudah paham<br>";
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar PHP</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f7f7; margin: 0; }
+        .container { max-width: 600px; margin: 24px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+        h1, h2 { color: #333; }
+        hr { border: none; border-top: 1px solid #eee; margin: 24px 0; }
+        code, pre { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+        @media (max-width: 700px) {
+            .container { padding: 12px; }
+            h1 { font-size: 1.5em; }
+            h2 { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <?php
+            // komentar
+            /*multiline komentar*/
+            echo "Hello World!<br>";
 
-    // variabel
-    $inivar = "Variabel sudah paham<br>";
-    echo $inivar;
+            // sintaks dasar
+            echo "Sintaks dasar sudah paham<br>";
 
-    // tipe data
-    echo "Tipe Data<br>";
-    echo is_numeric($inivar) ? "Variabel adalah angka<br>" : "Variabel bukan angka<br>";
+            // variabel
+            $inivar = "Variabel sudah paham<br>";
+            echo $inivar;
 
-    // text manipulation
-    echo "Text Manipulation<br>";
-    $text_satu = "Hello";
-    $text_dua = "World";
-    echo $text_satu . " " . $text_dua . "<br>"; // concatenation
-    $text_gabungan = "$text_satu $text_dua<br>"; // interpolation 
-    echo $text_gabungan;
+            // tipe data
+            echo "Tipe Data<br>";
+            echo is_numeric($inivar) ? "Variabel adalah angka<br>" : "Variabel bukan angka<br>";
 
-    $kalimat_satu = "Saya belajar PHP";
-    $kalimat_dua = "PHP itu menyenangkan";
-    echo strpos($kalimat_satu, "PHP");
-    // TEXT MANIPULATION LAIN
-    /*
-        strlen() => menghitung panjang string
-        str_word_count() => menghitung jumlah kata
-        str_replace() => mengganti kata
-        substr() => mengambil sebagian string
-        strtolower() => mengubah string menjadi huruf kecil
-        strtoupper() => mengubah string menjadi huruf besar
-    */
+            // text manipulation
+            echo "Text Manipulation<br>";
+            $text_satu = "Hello";
+            $text_dua = "World";
+            echo $text_satu . " " . $text_dua . "<br>"; // concatenation
+            $text_gabungan = "$text_satu $text_dua<br>"; // interpolation 
+            echo $text_gabungan;
 
-    // operator aritmatika
-    echo "<br>Operator Aritmatika<br>";
-    $a = 10;
-    $b = 20;
-    echo $a + $b . "<br>"; // penjumlahan
-    echo $b - $a . "<br>"; // pengurangan
-    echo $a * $b . "<br>"; // perkalian
-    echo $b / $a . "<br>"; // pembagian
-    echo $b % $a . "<br>"; // modulus
-    echo $a ** 2 . "<br>"; // pangkat
+            $kalimat_satu = "Saya belajar PHP";
+            $kalimat_dua = "PHP itu menyenangkan";
+            echo strpos($kalimat_satu, "PHP");
+            // TEXT MANIPULATION LAIN
+            /*
+                strlen() => menghitung panjang string
+                str_word_count() => menghitung jumlah kata
+                str_replace() => mengganti kata
+                substr() => mengambil sebagian string
+                strtolower() => mengubah string menjadi huruf kecil
+                strtoupper() => mengubah string menjadi huruf besar
+            */
 
-    // operator pembandingan
-    echo "Operator Pembandingan<br>";
-    var_dump($a == $b); // sama dengan
-    var_dump($a != $b); // tidak sama dengan
-    var_dump($a < $b); // kurang dari
-    var_dump($a > $b); // lebih dari
-    var_dump($a <= $b); // kurang dari sama dengan
-    var_dump($a >= $b); // lebih dari sama dengan
+            // operator aritmatika
+            echo "<br>Operator Aritmatika<br>";
+            $a = 10;
+            $b = 20;
+            echo $a + $b . "<br>"; // penjumlahan
+            echo $b - $a . "<br>"; // pengurangan
+            echo $a * $b . "<br>"; // perkalian
+            echo $b / $a . "<br>"; // pembagian
+            echo $b % $a . "<br>"; // modulus
+            echo $a ** 2 . "<br>"; // pangkat
 
-    // operator logika
-    echo "<br>Operator Logika<br>";
-    var_dump($a < $b && $a == 10); // AND
-    var_dump($a < $b || $a == 20); // OR
-    var_dump(!$a); // NOT
-    var_dump($a < $b xor $a == 20); // XOR pengembalikan nilai true jika salah satu bernilai true
+            // operator pembandingan
+            echo "Operator Pembandingan<br>";
+            var_dump($a == $b); // sama dengan
+            var_dump($a != $b); // tidak sama dengan
+            var_dump($a < $b); // kurang dari
+            var_dump($a > $b); // lebih dari
+            var_dump($a <= $b); // kurang dari sama dengan
+            var_dump($a >= $b); // lebih dari sama dengan
 
-    // struktur kontrol
-    echo "<br>Struktur Kontrol<br>";
+            // operator logika
+            echo "<br>Operator Logika<br>";
+            var_dump($a < $b && $a == 10); // AND
+            var_dump($a < $b || $a == 20); // OR
+            var_dump(!$a); // NOT
+            var_dump($a < $b xor $a == 20); // XOR pengembalikan nilai true jika salah satu bernilai true
 
-    // if else
-    if($a < $b) {
-        echo "$a lebih kecil dari $b<br>";
-    } else {
-        echo "$a tidak lebih kecil dari $b<br>";
-    }
+            // struktur kontrol
+            echo "<br>Struktur Kontrol<br>";
 
-    // if else if else
-    if($a < $b) {
-        echo "$a lebih kecil dari $b<br>";
-    } else if($a == $b) {
-        echo "$a sama dengan $b<br>";
-    } else {
-        echo "$a lebih besar dari $b<br>";
-    }
+            // if else
+            if($a < $b) {
+                echo "$a lebih kecil dari $b<br>";
+            } else {
+                echo "$a tidak lebih kecil dari $b<br>";
+            }
 
-    // switch case
-    $warna = "merah";
-    switch($warna) {
-        case "merah":
-            echo "Warna merah<br>";
-            break;
-        case "biru":
-            echo "Warna biru<br>";
-            break;
-        case "hijau":
-            echo "Warna hijau<br>";
-            break;
-        default:
-            echo "Warna tidak diketahui<br>";
-    }
+            // if else if else
+            if($a < $b) {
+                echo "$a lebih kecil dari $b<br>";
+            } else if($a == $b) {
+                echo "$a sama dengan $b<br>";
+            } else {
+                echo "$a lebih besar dari $b<br>";
+            }
 
-    // perulangan / looping
-    echo "Perulangan / Looping<br>";
-    // for
-    for($i = 1; $i <= 5; $i++) {
-        echo "Perulangan ke-$i<br>";
-    }
-    // while
-    $j = 1;
-    while($j <= 5) {
-        echo "Perulangan ke-$j<br>";
-        $j++;
-    }
-    // do while
-    $k = 1;
-    do {
-        echo "Perulangan ke-$k<br>";
-        $k++;
-    } while($k <= 5);
-?>
+            // switch case
+            $warna = "merah";
+            switch($warna) {
+                case "merah":
+                    echo "Warna merah<br>";
+                    break;
+                case "biru":
+                    echo "Warna biru<br>";
+                    break;
+                case "hijau":
+                    echo "Warna hijau<br>";
+                    break;
+                default:
+                    echo "Warna tidak diketahui<br>";
+            }
+
+            // perulangan / looping
+            echo "Perulangan / Looping<br>";
+            // for
+            for($i = 1; $i <= 5; $i++) {
+                echo "Perulangan ke-$i<br>";
+            }
+            // while
+            $j = 1;
+            while($j <= 5) {
+                echo "Perulangan ke-$j<br>";
+                $j++;
+            }
+            // do while
+            $k = 1;
+            do {
+                echo "Perulangan ke-$k<br>";
+                $k++;
+            } while($k <= 5);
+        ?>
+    </div>
+</body>
+</html>
